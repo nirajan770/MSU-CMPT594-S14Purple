@@ -4,10 +4,32 @@
 
 html {
   overflow-y: scroll;
+  height:100%;
 }
 
 body {
   padding-top: 60px;
+  height: 100%;
+}
+
+.container{
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+}
+
+.hero-unit {
+padding: 60px;
+margin-bottom: 30px;
+font-size: 18px;
+font-weight: 200;
+line-height: 30px;
+color: inherit;
+background-color: #eeeeee;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+height: 100%;
 }
 
 section {
@@ -40,7 +62,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;

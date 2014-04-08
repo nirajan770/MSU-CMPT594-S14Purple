@@ -2,8 +2,17 @@
   <h2>Welcome to the Student Database</h2>
 
   <br>
+  <h3> Please, Sign In ! </h3>
   <br>
   <br>
 
-  <%= link_to "Sign Up", signup_path, class: "btn btn-large btn-primary" %>
+
+  <%= form_tag(:controller=> 'users', :action => 'show') do %>
+    <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p> 
+    <p>Password:</br> <%= password_field_tag :login_password %></p> 
+    <%= submit_tag("Log In") %>
+  <% end %>
+
+
+  
 </div>
