@@ -15,17 +15,18 @@ group :development, :test do
 	gem 'sqlite3', '1.3.8'
 	gem 'rspec-rails', '2.13.1'
 	gem 'launchy'
-  
+  #gem 'database-cleaner', '1.2.0'
+  gem 'capybara'
 end
 
 group :test do
-  gem 'selenium-webdriver', '2.35.1'
-  gem 'capybara', '2.1.0'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require=>false
   gem 'cucumber-rails-training-wheels'
-  #gem 'database-cleaner', github: 'bmabey/database_cleaner'
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  
 end
 
+group :assets do
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.1'
 
@@ -35,6 +36,7 @@ gem 'uglifier', '2.1.1'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '4.0.1'
 
+end
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
