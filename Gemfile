@@ -15,7 +15,7 @@ group :development, :test do
 	gem 'sqlite3', '1.3.8'
 	gem 'rspec-rails', '2.13.1'
 	gem 'launchy'
-  #gem 'database-cleaner'
+  
 end
 
 group :test do
@@ -23,6 +23,7 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
+  #gem 'database-cleaner', github: 'bmabey/database_cleaner'
 end
 
 # Use SCSS for stylesheets
