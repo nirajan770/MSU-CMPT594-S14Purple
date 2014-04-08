@@ -1,11 +1,23 @@
 Customer::Application.routes.draw do
-  resources :welcome
+  #root :to => "home_pages#home"
+  
+  
+  root 'home_pages#home'
+  match '/help', to: 'home_pages#help', via: 'get'
+  match '/about', to: 'home_pages#about', via: 'get'
+  match '/signin', to: 'home_pages#signin', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
+
+  
+  get "users/new"
+  #resources :welcome
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root to: 'welcome#index'
+  #root to: 'welcome#index'
 
+  #match '/signup', to: 'welcome#signup', via: 'get'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
