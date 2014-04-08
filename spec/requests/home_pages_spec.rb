@@ -6,11 +6,11 @@ describe "HomePages" do
   
   describe "Home page" do
   	# describing the home page
-    it "should have the content 'Please, Sign In'" do
+    it "should have the content 'Welcome to the Student Database'" do
       # uses Capybara function visit to simulate visiting home page
       visit root_path
     # (page) variable provided by Capybara, to express the expectation
-      expect(page).to have_content('Please, Sign In')
+      expect(page).to have_content('Welcome to the Student Database')
     end
   end
 

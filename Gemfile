@@ -14,11 +14,15 @@ gem 'bcrypt-ruby', '3.1.2'
 group :development, :test do
 	gem 'sqlite3', '1.3.8'
 	gem 'rspec-rails', '2.13.1'
+	gem 'launchy'
+
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
+  gem 'cucumber-rails'
+  gem 'cucumber-rails-training-wheels'
 end
 
 # Use SCSS for stylesheets

@@ -5,16 +5,23 @@ Customer::Application.routes.draw do
   root 'home_pages#home'
   match '/help', to: 'home_pages#help', via: 'get'
   match '/about', to: 'home_pages#about', via: 'get'
-  match '/signin', to: 'home_pages#signin', via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+
   
 
   #resources :users
 
   get "users/new"
   get "users/show"
-  match 'users/index', to: 'users#index', via: 'post'
-  match 'users/index', to: 'users#index', via: 'get'
-  match 'users/new', to: 'users#new', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
+  match '/users', to: 'users#index', via: 'get'
+  match '/users', to: 'users#create', via: 'post'
+  match '/users/new', to: 'users#new', via: 'get'
+
+
+  resources :sessions, only: [:new, :create, :destroy]
+
   #resources :welcome
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
