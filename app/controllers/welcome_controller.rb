@@ -1,5 +1,14 @@
 class WelcomeController < ApplicationController
   def index
-	@students = Student.all
   end
+
+  def show
+  end
+
+  def signup
+  end
+
+  def signin
+  end
+  
 end
