@@ -1,8 +1,15 @@
 class UsersController < ApplicationController
+  
   def new
   end
   
-  def show
+  def index
+  end
+  
+  def create
+  end
+
+  def signup
   end
   
 end

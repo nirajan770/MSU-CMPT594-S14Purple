@@ -6,7 +6,7 @@
  <br>
 
 
- <%= form_tag(:controller=> 'users', :action => 'show') do %>
+ <%= form_tag(:controller=> 'users', :action => 'index') do %>
     <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p> 
     <p>Password:</br> <%= password_field_tag :login_password %></p> 
     <%= submit_tag("Log In") %>

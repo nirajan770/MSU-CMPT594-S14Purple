@@ -1,8 +1,21 @@
 <div class="center hero-unit">
-  <h2>Sign Up</h2>
+  <h2>Create an Account</h2>
 
-  <h4> Please, Complete all the following fields ! </h4>
+  <h5> Please, Complete all the following fields ! </h5>
  
 
-  <%= link_to "Register", '#', class: "btn btn-large btn-primary" %>
+<div class="container">
+  
+  <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+    <p> Username:</br> <%= f.text_field :username%> </p>
+    <p> Email:</br> <%= f.text_field :email%> </p>
+    <p> Password:</br> <%= f.password_field :password%></p>
+    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+    <%= f.submit :Signup %>
+  <% end %>
+  
+</div>
+
+
+  
 </div>
