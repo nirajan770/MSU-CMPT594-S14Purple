@@ -3,7 +3,11 @@ Given /^a user visits the signin page$/ do
 end
 
 When /^they submit invalid signin information$/ do
+<<<<<<< HEAD
+  click_button "Sign In"
+=======
   click_button "Sign in"
+>>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 end
 
 Then /^they should see an error message$/ do
@@ -18,7 +22,11 @@ end
 When /^the user submits valid signin information$/ do
   fill_in "Email",    with: @user.email
   fill_in "Password", with: @user.password
+<<<<<<< HEAD
+  click_button "Sign In"
+=======
   click_button "Sign in"
+>>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 end
 
 Then /^they should see their profile page$/ do
@@ -26,5 +34,9 @@ Then /^they should see their profile page$/ do
 end
 
 Then /^they should see a signout link$/ do
+<<<<<<< HEAD
+  expect(page).to have_link('Sign Out', href: signout_path)
+=======
   expect(page).to have_link('Sign out', href: signout_path)
+>>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 end

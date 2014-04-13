@@ -1,5 +1,19 @@
+<<<<<<< HEAD
+<% provide(:title, 'All users') %>
+
+<h2>User Accounts</h2>
+
+<ul class="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+  <% end %>
+</ul>
+
+<%= link_to "Add a User!", signup_path, class: "btn btn-large btn-secondary" %>
+=======
 <div class="center hero-unit">
 <h1> Welcome </h1>
 <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 
 </div>
+>>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
