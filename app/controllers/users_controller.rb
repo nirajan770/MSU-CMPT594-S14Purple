@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
   before_filter :signed_in_user, only: [:index, :edit, :update, :destroy]
   before_filter :correct_user,   only: [:edit, :update]
   before_filter :admin_user, only: :destroy
@@ -93,18 +92,4 @@ class UsersController < ApplicationController
       redirect_to(root_url) unless current_user.admin?
     end
 
-=======
-  
-  def new
-  end
-  
-  def index
-  end
-  
-  def create
-  	
-  end
-
-  
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 end

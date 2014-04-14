@@ -1,10 +1,6 @@
 @import "bootstrap";
 
-<<<<<<< HEAD
 /**** universal ****/
-=======
-/* universal */
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 
 html {
   overflow-y: scroll;
@@ -52,12 +48,8 @@ textarea {
   margin-bottom: 10px;
 }
 
-<<<<<<< HEAD
 
 /**** typography *****/
-=======
-/* typography */
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -84,11 +76,7 @@ p {
   line-height: 1.7em;
 }
 
-<<<<<<< HEAD
 /**** header ****/
-=======
-/* header */
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 
 #logo {
   float: left;
@@ -107,11 +95,7 @@ p {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
 /**** footer ****/
-=======
-/* footer */
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 
 footer {
   margin-top: 45px;
@@ -141,7 +125,6 @@ footer ul li {
   float: left;
   margin-left: 10px;
 }
-<<<<<<< HEAD
 
 /**** sidebar ****/
 
@@ -236,5 +219,3 @@ $grayMediumLight: #eaeaea;
   margin-top: 45px;
   @include box_sizing;
 }
-=======
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a

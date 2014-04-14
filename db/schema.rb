@@ -11,22 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140413085302) do
-=======
-ActiveRecord::Schema.define(version: 20140408115525) do
-
-  create_table "students", force: true do |t|
-    t.string "lastname"
-    t.string "firstname"
-    t.string "email"
-    t.string "address"
-    t.string "town"
-    t.string "state"
-    t.string "zipcode"
-    t.string "rank"
-  end
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -34,15 +19,10 @@ ActiveRecord::Schema.define(version: 20140408115525) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
-<<<<<<< HEAD
     t.string   "remember_token"
     t.boolean  "admin",           default: false
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
-=======
-  end
-
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 end

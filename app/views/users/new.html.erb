@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <% provide(:title, 'Sign Up') %>
 <h1>Sign Up</h1>
 
@@ -22,26 +21,4 @@
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
-=======
-<div class="center hero-unit">
-  <h2>Create an User Admin Account</h2>
-
-  <h5> Please, Complete all the following fields ! </h5>
- 
-
-<div class="container">
-  
-  <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-    <p> Username:</br> <%= f.text_field :username%> </p>
-    <p> Email:</br> <%= f.text_field :email%> </p>
-    <p> Password:</br> <%= f.password_field :password%></p>
-    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
-    <%= f.submit :Signup %>
-  <% end %>
-  
-</div>
-
-
-  
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 </div>

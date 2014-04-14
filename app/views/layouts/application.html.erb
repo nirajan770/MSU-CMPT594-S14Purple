@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
   <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-=======
-  <title>Customer</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
@@ -15,7 +10,6 @@
 <body>
     <%= render 'layouts/header' %>
     <div class="container">
-<<<<<<< HEAD
     <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
@@ -25,10 +19,6 @@
       <!-- FOR DEBUG PURPOSES -->
       <%= debug(params) if Rails.env.development? %>
 
-=======
-      <%= yield %>
-      <%= render 'layouts/footer' %>
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
     </div>
   
 

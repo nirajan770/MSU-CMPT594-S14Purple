@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-<<<<<<< HEAD
 #### RSpec Test for User Model #####
 
 describe User do
@@ -30,29 +29,6 @@ describe User do
 
     it { should be_admin }
   end
-=======
-
-## Testing for the :name and :email attributes
-describe User do
-  
-  before do
-  	@user= User.new(name: "Exampler User", email: "user@example.com",
-  		password: "foobar", password_confirmation: "foobar")
-  end
-
-  subject { @user }
-
-## Valid cases
-  it {should respond_to(:name)}
-  it {should respond_to(:email)}
-  it {should respond_to(:password_digest)}
-  it {should respond_to(:password)}
-  it {should respond_to(:password_confirmation)}
-
-
-  ## validating presence of name and email
-  it {should be_valid}
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 
 ## throw error if name is not present
 describe "when name is not present" do
@@ -72,7 +48,6 @@ describe "when name is too long " do
 	it { should_not be_valid}
 end
 
-<<<<<<< HEAD
 ## validating the email format
 describe "when email format is invalid" do
 	it "should be invalid" do
@@ -108,9 +83,6 @@ end
 
 ### Tests for Password ###
 
-=======
-## validating the password
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 describe "when password is not present" do
   before do
     @user = User.new(name: "Example User", email: "user@example.com",
@@ -119,27 +91,17 @@ describe "when password is not present" do
   it { should_not be_valid }
 end
 
-<<<<<<< HEAD
-=======
-## If Passwords do not match
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 describe "when password doesn't match confirmation" do
   before { @user.password_confirmation = "mismatch" }
   it { should_not be_valid }
 end
 
-<<<<<<< HEAD
 ### User Authentication ###
-=======
-## Validating User Authentication
-
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 describe "with a password that's too short" do
     before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
   end
 
-<<<<<<< HEAD
 describe "return value of authenticate method" do
     before { @user.save }
     let(:found_user) { User.find_by(email: @user.email) }
@@ -149,23 +111,11 @@ describe "with valid password" do
    end
 
 describe "with invalid password" do
-=======
-  describe "return value of authenticate method" do
-    before { @user.save }
-    let(:found_user) { User.find_by(email: @user.email) }
-
-    describe "with valid password" do
-      it { should eq found_user.authenticate(@user.password) }
-    end
-
-    describe "with invalid password" do
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
       let(:user_for_invalid_password) { found_user.authenticate("invalid") }
 
       it { should_not eq user_for_invalid_password }
       specify { expect(user_for_invalid_password).to be_false }
     end
-<<<<<<< HEAD
 end
 
 ## Test for the Remember Sign In Token
@@ -176,14 +126,3 @@ describe "remember token" do
 
 
 end
-=======
-  end
-
-##****Remaining Test Cases ** ####
-## Email Format
-## Email Uniqueness Validation
-## 
-
-
-end
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a

@@ -1,5 +1,4 @@
 module SessionsHelper
-<<<<<<< HEAD
 	def sign_in(user)
     remember_token = User.new_remember_token
     cookies.permanent[:remember_token] = remember_token
@@ -45,6 +44,4 @@ def redirect_back_or(default)
     session[:return_to] = request.url if request.get?
   end
 
-=======
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 end

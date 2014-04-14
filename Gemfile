@@ -17,12 +17,9 @@ group :development, :test do
 	gem 'launchy'
   #gem 'database-cleaner', '1.2.0'
   gem 'capybara'
-<<<<<<< HEAD
 ## gem to create Active Record objects for testing
   gem 'factory_girl_rails', '4.2.1'
 
-=======
->>>>>>> fd93d8d470f2dd90da459cb99b177e1a7f15569a
 end
 
 group :test do
