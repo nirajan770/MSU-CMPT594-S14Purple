@@ -3,9 +3,11 @@
 <h2>User Accounts</h2>
 
 <ul class="users">
-  <% @users.each do |user| %>
+ <!-- <% @users.each do |user| %>
     <%= render user %>
   <% end %>
+  -->
+  <%= render @users %>
 </ul>
 
 <%= link_to "Add a User!", signup_path, class: "btn btn-large btn-secondary" %>

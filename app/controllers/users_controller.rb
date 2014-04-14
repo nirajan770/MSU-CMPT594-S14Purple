@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    
   end
 
   # POST /users
@@ -43,8 +43,8 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
-      sign_in @user
+      flash[:success] = "Profile Updated"
+      #sign_in @user
       redirect_to @user
     else
       render 'edit'
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User deleted."
+    flash[:success] = "User Deleted."
     redirect_to users_path
   end
 
@@ -77,16 +77,17 @@ class UsersController < ApplicationController
    
 
     def correct_user
-      #@user = User.find(params[:id])
-      #redirect_to(root_path) unless current_user?(@user)
-    if(current_user?(@user))
       @user = User.find(params[:id])
-    else
-      flash[:error] = 'You are not authorized to edit the information!'
-      redirect_to(root_path)
+      redirect_to(root_path) unless current_user?(@user)
     end
-
-    end
+   
+    # if(current_user?(@user))
+     #   @user = User.find(params[:id])
+      #  else
+       #   flash[:error] = 'You are not authorized to edit the information!'
+       # redirect_to(root_path)
+      # end
+    # end
 
     def admin_user
       redirect_to(root_url) unless current_user.admin?

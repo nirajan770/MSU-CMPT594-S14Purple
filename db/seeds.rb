@@ -15,3 +15,7 @@ user= User.create!(name: "Serkan",
                          email: "srknyavuz86@gmail.com",
                          password: "serkan",
                          password_confirmation: "serkan")
+User.create!(name:"Steven Lin", email: "steven.lin1986@gmail.com",
+			password: "steven", password_confirmation: "steven")
+User.create!(name:"Silpa", email: "silpacreddy@gmail.com",
+			password: "silpa", password_confirmation: "silpa")

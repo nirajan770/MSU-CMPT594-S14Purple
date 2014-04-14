@@ -1,13 +1,15 @@
 <% provide(:title, @user.name) %>
+<body>
 <div class="row">
-  <aside class="span4">
+  <ul class="users">
     <section>
-      <h1>
-       <%= @user.name %>
-       <%= link_to "Edit", edit_user_path, class: "btn btn-large btn-secondary" %>
-       
+      <h4> <%= @user.name %> <h4>
+       <h4><%= @user.email %><h4>
+       <% if current_user?(@user) %> <%= link_to "Edit", edit_user_path, class: "btn btn-large btn-secondary" %>
+       <% end %>
       </h1>
     </section>
-  </aside>
+  </ul>
 </div>
 
+</body>
