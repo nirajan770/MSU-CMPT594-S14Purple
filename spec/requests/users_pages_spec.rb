@@ -16,7 +16,7 @@ describe "index" do
     end
 
     it { should have_title('All users') }
-    it { should have_content('All users') }
+    it { should have_content('User Accounts') }
 
     it "should list each user" do
       User.all.each do |user|
@@ -110,7 +110,7 @@ describe "edit" do
     before { visit edit_user_path(user) }
 
     describe "page" do
-      it { should have_content("Update your profile") }
+      it { should have_content("Update your Profile") }
       it { should have_title("Edit user") }
     end
 
