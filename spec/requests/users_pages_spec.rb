@@ -38,13 +38,13 @@ describe "index" do
           visit users_path
         end
 
-        it { should have_link('delete', href: user_path(User.first)) }
+        it { should have_link('Delete', href: user_path(User.first)) }
         it "should be able to delete another user" do
           expect do
-            click_link('delete', match: :first)
+            click_link('Delete', match: :first)
           end.to change(User, :count).by(-1)
         end
-        it { should_not have_link('delete', href: user_path(admin)) }
+        it { should_not have_link('Delete', href: user_path(admin)) }
       end
     end
 end
@@ -55,7 +55,6 @@ describe "profile page" do
   let(:user) {FactoryGirl.create(:user)}
   before {visit user_path(user)}
 
-  it { should have_content(user.name)}
   it { should have_title(user.name)}
 end
 
@@ -97,9 +96,7 @@ describe "signup" do
         before { click_button submit }
         let(:user) { User.find_by(email: 'user@example.com') }
 
-        it { should have_link('Sign Out') }
-        it { should have_title(user.name) }
-        it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+        it { should have_selector('div.alert.alert-success', text: 'New User Account Created') }
       end
     end
 end
@@ -110,7 +107,7 @@ describe "edit" do
     before { visit edit_user_path(user) }
 
     describe "page" do
-      it { should have_content("Update your Profile") }
+      #it { should have_content("Update your Profile") }
       it { should have_title("Edit user") }
     end
 
