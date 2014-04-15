@@ -37,7 +37,12 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    
+    if current_user.admin?
+      @user= User.find(params[:id])
+    else
+      flash[:alert] = "This area is restricted to administrators only."
+      redirect_to(root_path)
+    end
   end
 
   # POST /users
