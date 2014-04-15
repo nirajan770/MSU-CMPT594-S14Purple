@@ -11,6 +11,7 @@ admin = User.create!(name: "Nirajan Thapa",
                          password: "nirajan",
                          password_confirmation: "nirajan",
                          admin: true)
+admin.toggle!(:admin)
 user= User.create!(name: "Serkan",
                          email: "srknyavuz86@gmail.com",
                          password: "serkan",
