@@ -7,15 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 admin = User.create!(name: "Nirajan Thapa",
-                         email: "nirajan@mail.montclair.edu",
+                         email: "nirajan_thapa@mail.montclair.edu",
                          password: "nirajan",
                          password_confirmation: "nirajan",
                          admin: true)
 admin.toggle!(:admin)
-user= User.create!(name: "Serkan",
-                         email: "srknyavuz86@gmail.com",
-                         password: "serkan",
-                         password_confirmation: "serkan")
+
 
 students= [{:name=> 'Robert Pires', :address=>'120 Bloomfield Avenue', :city=>'Caldwell', :state=>'NJ',
 			:country=>'US', :zip=>'07006', :phone=>'555-555-5555', :email=>'robert@aol.com'},

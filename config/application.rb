@@ -22,5 +22,12 @@ module TestApp
     I18n.enforce_available_locales = true
     
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    # Assume all model attributes are safe by default
+    config.active_record.whitelist_attributes = true
+
+    # Preventing initializing the application and connecting to the database
+    config.assets.initialize_on_precompile=false
+
   end
 end
