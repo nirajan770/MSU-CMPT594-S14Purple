@@ -10,8 +10,6 @@ module NavigationHelpers
    '/users'
    when /^the help page$/
    '/help'
-   when /^the students page$/
-   '/students'
    when /^the about page$/
    '/about'
     # Add more mappings here.
