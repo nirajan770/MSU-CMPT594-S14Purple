@@ -1,23 +1,38 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:index, :edit, :show, :update, :destroy]
-  before_filter :correct_user,   only: [:edit, :update]
+  before_filter :admin_user, only: [:index, :edit, :show, :update, :destroy]
+  #before_filter :correct_user,   only: [:edit, :update]
   before_action :admin_user, only: :destroy
   before_filter :store_location
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if current_user.admin?
+      @users = User.all
+    else
+      flash[:alert] = "This area is restricted to administrators only."
+      redirect_to(root_path)
+    end
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    @user= User.find(params[:id])
+    if current_user.admin?
+      @user= User.find(params[:id])
+    else
+      flash[:alert] = "This area is restricted to administrators only."
+      redirect_to(root_path)
+    end
   end
 
   # GET /users/new
   def new
-    @user = User.new
+    if current_user.admin?
+      @user = User.new
+    else
+      flash[:alert] = "This area is restricted to administrators only."
+      redirect_to(root_path)
+    end
   end
 
   # GET /users/1/edit
@@ -28,14 +43,19 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user])
-    if @user.save
-      ## don't want to automatically sign in right after registration
-      #sign_in @user
-      flash[:success]="New User Account Created"   
-      redirect_to @user
+    if current_user.admin?
+      @user = User.new(params[:user])
+      if @user.save
+        ## don't want to automatically sign in right after registration
+        #sign_in @user
+        flash[:success]="New User Account Created"   
+        redirect_to @user
+      else
+        render 'new'
+      end
     else
-      render 'new'
+      flash[:alert] = "This area is restricted to administrators only."
+      redirect_to(root_path)
     end
     
   end
@@ -43,12 +63,17 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    if @user.update_attributes(user_params)
-      flash[:success] = "Profile Updated"
-      #sign_in @user
-      redirect_to @user
+    if current_user.admin?
+      if @user.update_attributes(user_params)
+        flash[:success] = "Profile Updated"
+        #sign_in @user
+        redirect_to @user
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      flash[:alert] = "This area is restricted to administrators only."
+      redirect_to(root_path)
     end
   end
 
@@ -79,7 +104,7 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user) or current_user.admin?
+      redirect_to(root_path) unless current_user.admin?
     end
    
     # if(current_user?(@user))
@@ -92,6 +117,19 @@ class UsersController < ApplicationController
 
     def admin_user
       redirect_to(root_url) unless current_user.admin?
+    end
+
+    def authenticate_admin_user!
+        authenticate_user! 
+    unless current_user.admin?
+        flash[:alert] = "This area is restricted to administrators only."
+        redirect_to root_path 
+      end
+    end
+ 
+    def current_admin_user
+      return nil if user_signed_in? && !current_user.admin?
+      current_user
     end
 
 end
