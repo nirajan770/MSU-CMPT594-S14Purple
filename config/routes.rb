@@ -1,5 +1,7 @@
 TestApp::Application.routes.draw do
 
+  resources :students
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   
