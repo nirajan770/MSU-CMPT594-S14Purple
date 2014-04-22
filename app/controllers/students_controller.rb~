@@ -8,7 +8,12 @@ class StudentsController < ApplicationController
   def index
    @students = Student.search(params[:search])
   end
-
+   if params[:search]
+    @students = Student.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+   else
+    @students = Student.find(:all)
+   end
+  end
 
   # GET /students/1
   # GET /students/1.json

@@ -15,6 +15,7 @@ class Student < ActiveRecord::Base
 	attr_accessible :name, :email, :address, :state, :country, :zip, :city, :phone
    
    def self.search(search)
+     
     if search
      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
     else
