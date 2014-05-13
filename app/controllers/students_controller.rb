@@ -1,12 +1,11 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
-  before_filter :signed_in_user, only: [:index, :edit, :show, :update, :destroy]
-
 
   # GET /students
   # GET /students.json
   def index
-   @students = Student.search(params[:search])
+    @search = Student.search(params[:q])
+    @students = @search.result
   end
 
 

@@ -3,12 +3,14 @@ require 'spec_helper'
 describe "students/new" do
   before(:each) do
     assign(:student, stub_model(Student,
-      :name => "MyString",
-      :address => "MyString",
-      :state => "MyString",
-      :country => "MyString",
-      :phone => "MyString",
-      :email => "MyString"
+        :name => "T-Name",
+        :address => "T-Address",
+        :state => "T-State",
+        :country => "T-Country",
+        :phone => "T-Phone",
+        :zip => "T-Zip",
+        :city => "T-City",
+        :email => "email2@test.com"
     ).as_new_record)
   end
 
@@ -23,6 +25,8 @@ describe "students/new" do
       assert_select "input#student_country[name=?]", "student[country]"
       assert_select "input#student_phone[name=?]", "student[phone]"
       assert_select "input#student_email[name=?]", "student[email]"
+      assert_select "input#student_zip[name=?]", "student[zip]"
+      assert_select "input#student_city[name=?]", "student[city]"
     end
   end
 end

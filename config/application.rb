@@ -24,10 +24,12 @@ module TestApp
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
     # Assume all model attributes are safe by default
-    config.active_record.whitelist_attributes = true
+    config.active_record.whitelist_attributes = false
 
     # Preventing initializing the application and connecting to the database
     config.assets.initialize_on_precompile=false
+
+    config.active_record.observers = :user_observer, :message_observer
 
   end
 end

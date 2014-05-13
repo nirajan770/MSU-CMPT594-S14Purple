@@ -7,6 +7,8 @@ FactoryGirl.define do
     state "MyString"
     country "MyString"
     phone "MyString"
-    email "MyString"
+    email "MyString@mystring.com"
+    zip "45970"
+    city "Istanbul"
   end
 end

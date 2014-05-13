@@ -77,4 +77,16 @@ TestApp::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.default_url_options = {host: 'production.com'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address: 'smtp.mandrillapp.com',
+      port: 587,
+      enable_starttls_auto: true,
+      user_name: 'srknyavuz86@gmail.com',
+      password: 'b8oArXGnROL7V08qlbGEKg',
+      authentication: 'login',
+      domain: 'production.com'
+  }
 end

@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe "users/new" do
   before(:each) do
+    view.stub!(current_user: User.create(name: 'test', email: 'tttest@tes.com', password: '12341234', password_confirmation: '12341234'))
     assign(:user, stub_model(User,
       :name => "MyString",
       :email => "MyString"

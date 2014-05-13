@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe "users/index" do
   before(:each) do
+    view.stub!(current_user: User.create(name: 'test', email: 'tttest@tes.com', password: '12341234', password_confirmation: '12341234'))
     assign(:users, [
       stub_model(User,
         :name => "Name",
@@ -17,7 +18,6 @@ describe "users/index" do
   it "renders a list of users" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "tr>td", :text => "Name".to_s, :count => 2
-    assert_select "tr>td", :text => "Email".to_s, :count => 2
+    assert_select "li", :count => 2
   end
 end

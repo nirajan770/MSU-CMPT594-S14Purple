@@ -1,6 +1,7 @@
 class HomePagesController < ApplicationController
-	before_filter :store_location
-	
+
+  skip_before_action :authenticate_user!
+
   def home
   end
 

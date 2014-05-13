@@ -11,7 +11,7 @@ describe "HomePages" do
       # uses Capybara function visit to simulate visiting home page
       visit root_path
     # (page) variable provided by Capybara, to express the expectation
-      expect(page).to have_content('Welcome to the Student Database')
+      expect(page).to have_content('Welcome to Student Database')
     end
 
     it "should have the title 'Home'" do
@@ -37,9 +37,9 @@ describe "HomePages" do
 
   ## Test For About Page ##
   describe "About page" do
-  	it "should have the content 'About Developers'" do
-  		#visit about_path
-  		visit about_path
+    it "should have the content 'About Developers'" do
+      #visit about_path
+      visit about_path
       expect(page).to have_content('About Developers')
   	end
 

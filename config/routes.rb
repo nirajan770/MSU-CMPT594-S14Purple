@@ -1,18 +1,21 @@
 TestApp::Application.routes.draw do
 
-  resources :students
+
+
+  devise_for :users, :path => 'accounts', :path_names => { :sign_in => 'login', :sign_up => 'new', :sign_out => 'logout', :password => 'secret',
+                                    :confirmation => 'verification' }, :controllers => { registrations: 'registrations' }
+
+  resources :students do
+    resources :messages, except: [:edit, :update]
+  end
 
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-  
+
   root 'home_pages#home'
   
   match '/help', to: 'home_pages#help', via: 'get'
   match '/about', to: 'home_pages#about', via: 'get'
-  
-  match '/signup', to: 'users#new', via: 'get'
-  match '/signin',  to: 'sessions#new', via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
+
   
   
 

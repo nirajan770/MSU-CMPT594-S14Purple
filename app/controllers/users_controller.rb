@@ -1,13 +1,12 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:index, :edit, :show, :update, :destroy]
-  #before_filter :correct_user,   only: [:edit, :update]
   before_action :admin_user, only: :destroy
-  before_filter :store_location
+
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
   # GET /users
   # GET /users.json
   def index
     if current_user.admin?
-      @users = User.all
+      @users = User.not_admins
     else
       flash[:alert] = "This area is restricted to administrators only."
       redirect_to(root_path)
@@ -49,7 +48,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     if current_user.admin?
-      @user = User.new(params[:user])
+      @user = User.new(user_params)
       if @user.save
         ## don't want to automatically sign in right after registration
         #sign_in @user
@@ -69,7 +68,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if current_user.admin?
-      if @user.update_attributes(user_params)
+      if @user.update(user_params)
         flash[:success] = "Profile Updated"
         #sign_in @user
         redirect_to @user
@@ -98,12 +97,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :password,
-        :password_confirmation)
-    end
-
-    def signed_in_user
-      redirect_to signin_url, notice: "Please sign in." unless signed_in?
+      params.require(:user).permit(:name, :email)
     end
    
 
