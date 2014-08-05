@@ -1,0 +1,17 @@
+
+
+<tbody>
+    <tr>
+        <td><%= link_to user.name, user %></td>
+        <td><%= link_to user.email, user %></td>
+        <td><% if current_user.admin? %>
+    	<%= link_to "Delete", user, method: :delete, data: { confirm: "Are you sure?" },
+                                  class: "btn btn-primary btn-danger"  %>
+  		<% end %></td>
+
+
+		</tr>
+    
+  </tbody>
+</table>
+
