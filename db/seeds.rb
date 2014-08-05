@@ -6,12 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+<<<<<<< HEAD
 admin = User.create!(name: "Nirajan Thapa",
                          email: "nirajan@gmail.com",
                          password: "nirajan",
                          password_confirmation: "nirajan",
                          admin: true)
 						 
+=======
+admin = User.create!(name: "Serkan Yavuz",
+                         email: "srknyavuz86@gmail.com",
+                         password: "serkan471905",
+                         password_confirmation: "serkan471905",
+                         admin: true)
+>>>>>>> 95c7e1a2bc985722ebab4d558ec55a49822962d9
 
 students= [{:name=> 'Nicholas Yavuz', :address=>'120 Bloomfield Avenue', :city=>'Caldwell', :state=>'NJ',
 			:country=>'US', :zip=>'07006', :phone=>'555-555-5555', :email=>'nico86yvz@gmail.com'},
