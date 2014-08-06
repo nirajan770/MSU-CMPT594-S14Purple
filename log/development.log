@@ -17285,3 +17285,465 @@ Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2014-08-05 20:08:17 -040
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-05 20:08:18 -0400
+
+
+Started GET "/accounts/login" for 127.0.0.1 at 2014-08-05 20:09:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 258ms (Views: 255.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home_pages.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/home_pages.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:24 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:25 -0400
+
+
+Started POST "/accounts/login" for 127.0.0.1 at 2014-08-05 20:09:30 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMnOaryBgk0FeDSugeLLdNZrvPpQ23Qsa7tdytLNr5k=", "user"=>{"email"=>"nirajan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'nirajan@gmail.com' ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 7ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMnOaryBgk0FeDSugeLLdNZrvPpQ23Qsa7tdytLNr5k=", "user"=>{"email"=>"nirajan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 410ms (Views: 167.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:31 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:31 -0400
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:31 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:31 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:31 -0400
+
+
+Started GET "/assets/home_pages.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/home_pages.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:32 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:33 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:33 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:33 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:33 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:33 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:33 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:33 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-05 20:09:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/accounts/login" for 127.0.0.1 at 2014-08-05 20:12:43 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 242ms (Views: 189.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:43 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:43 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:43 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:43 -0400
+
+
+Started GET "/assets/home_pages.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:43 -0400
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/home_pages.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:44 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:45 -0400
+
+
+Started POST "/accounts/login" for 127.0.0.1 at 2014-08-05 20:12:49 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMnOaryBgk0FeDSugeLLdNZrvPpQ23Qsa7tdytLNr5k=", "user"=>{"email"=>"nirajan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'nirajan@gmail.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 13ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMnOaryBgk0FeDSugeLLdNZrvPpQ23Qsa7tdytLNr5k=", "user"=>{"email"=>"nirajan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (69.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 472ms (Views: 191.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/home_pages.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/home_pages.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:50 -0400
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:51 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:52 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-05 20:12:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'nirajan@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'nirajan@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'nirajan@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'nirajan@gmail.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'nirajan@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (110.0ms)[0m  INSERT INTO "users" ("admin", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["admin", true], ["created_at", Wed, 06 Aug 2014 00:20:23 UTC +00:00], ["email", "nirajan@gmail.com"], ["encrypted_password", "$2a$10$Rz7sXY7vKNu9UJ3a0HfoNupg9QXs9VoMzcqMv7.EbGdwwKJS3svYC"], ["name", "Nirajan Thapa"], ["updated_at", Wed, 06 Aug 2014 00:20:23 UTC +00:00]]
+  [1m[36m (125.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mStudent Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('nico86yvz@gmail.com') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'nirajan1234@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (93.0ms)[0m  INSERT INTO "users" ("admin", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["admin", true], ["created_at", Wed, 06 Aug 2014 00:21:35 UTC +00:00], ["email", "nirajan1234@gmail.com"], ["encrypted_password", "$2a$10$rql/YbL6bD5zKY8QxVmo3Oyoz.JHJdzo/ih5a2ecWkezOUcQ6D2ni"], ["name", "Nirajan Thapa"], ["updated_at", Wed, 06 Aug 2014 00:21:35 UTC +00:00]]
+  [1m[36m (160.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mStudent Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('nico86yvz@gmail.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction

@@ -8,10 +8,10 @@
 
 
 
-admin = User.create!(name: "Nirajan Thapa",
-                         email: "nirajan@gmail.com",
-                         password: "nirajan",
-                         password_confirmation: "nirajan",
+admin = User.create!(name: "Admin Admin",
+                         email: "admin1234@gmail.com",
+                         password: "admin1234",
+                         password_confirmation: "admin1234",
                          admin: true)				 
 
 
