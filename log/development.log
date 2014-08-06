@@ -17747,3 +17747,223 @@ Binary data inserted for `string` type on column `encrypted_password`
   [1m[35m (0.0ms)[0m  begin transaction
   [1m[36mStudent Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('nico86yvz@gmail.com') LIMIT 1[0m
   [1m[35m (0.0ms)[0m  rollback transaction
+
+
+Started GET "/accounts/login" for 127.0.0.1 at 2014-08-05 20:23:58 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 216ms (Views: 180.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-05 20:23:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-05 20:23:59 -0400
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-08-05 20:23:59 -0400
+
+
+Started GET "/assets/home_pages.css?body=1" for 127.0.0.1 at 2014-08-05 20:23:59 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-08-05 20:23:59 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-05 20:23:59 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-05 20:23:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-05 20:23:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-05 20:23:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/home_pages.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:00 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:01 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:01 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:01 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:01 -0400
+
+
+Started POST "/accounts/login" for 127.0.0.1 at 2014-08-05 20:24:09 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMnOaryBgk0FeDSugeLLdNZrvPpQ23Qsa7tdytLNr5k=", "user"=>{"email"=>"admin1234@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin1234@gmail.com' ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 8ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZMnOaryBgk0FeDSugeLLdNZrvPpQ23Qsa7tdytLNr5k=", "user"=>{"email"=>"admin1234@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 352ms (Views: 148.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-05 20:24:09 -0400
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-08-05 20:24:09 -0400
+
+
+Started GET "/assets/home_pages.css?body=1" for 127.0.0.1 at 2014-08-05 20:24:09 -0400
+
+
+Started GET "/assets/messages.css?body=1" for 127.0.0.1 at 2014-08-05 20:24:09 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-08-05 20:24:09 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/home_pages.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/messages.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:10 -0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-05 20:24:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin1234@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (92.0ms)[0m  INSERT INTO "users" ("admin", "created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["admin", true], ["created_at", Wed, 06 Aug 2014 00:25:10 UTC +00:00], ["email", "admin1234@gmail.com"], ["encrypted_password", "$2a$10$nWpKzz6JuC7yTF.eva0uwOK9bYTZYSlo9Mf1GOiHAnK9dzdGk..pS"], ["name", "Admin Admin"], ["updated_at", Wed, 06 Aug 2014 00:25:10 UTC +00:00]]
+  [1m[36m (163.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mStudent Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "students" WHERE LOWER("students"."email") = LOWER('nico86yvz@gmail.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction

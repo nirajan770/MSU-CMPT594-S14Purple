@@ -15,10 +15,10 @@ admin = User.create!(name: "Admin Admin",
                          admin: true)				 
 
 
-students= [{:name=> 'Nicholas Yavuz', :address=>'120 Bloomfield Avenue', :city=>'Caldwell', :state=>'NJ',
-			:country=>'US', :zip=>'07006', :phone=>'555-555-5555', :email=>'nico86yvz@gmail.com'},
-			{:name=> 'Jack Black', :address=>'12 Fairfield Avenue', :city=>'Verona', :state=>'NJ',
-			:country=>'US', :zip=>'07044', :phone=>'333-555-5335', :email=>'jack@aol.com'}
+students= [{:name=> 'Alice Key', :address=>'120 Bloomfield Avenue', :city=>'Caldwell', :state=>'NJ',
+			:country=>'US', :zip=>'07006', :phone=>'555-555-5555', :email=>'alicekey@gmail.com'},
+			{:name=> 'Jack Back', :address=>'12 Fairfield Avenue', :city=>'Verona', :state=>'NJ',
+			:country=>'US', :zip=>'07044', :phone=>'333-555-5335', :email=>'jackblack@aol.com'}
 			]
 
 students.each do |student|
